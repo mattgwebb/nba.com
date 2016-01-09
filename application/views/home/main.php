@@ -12,6 +12,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Deben de estar presentes estos "tags", despues de ellos el resto -->
     <meta name="description" content="Pagina dedicada a la liga estadounidense de baloncesto, la NBA">
     <meta name="author" content="Francisco Javier Galiana y Matthew Webb">
+    <meta name="keywords" content="Ingeniería, web, NBA" />
+    <meta name="copyright" content="2016 FraMatt" />
     <link rel="icon" href="assets/img/favicon.ico">
 
     <title>NBA.ua.es</title>
@@ -85,8 +87,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </footer>
     </div>
 
-   	<!-- Necesario para cualquier pagina con Bootstrap, se coloca al final para evitar que cargue lenta la pagina -->
-    <script src="assets/js/jquery-1.12.0.min.js";</script> 
+  <!-- Necesario para cualquier pagina con Bootstrap, se coloca al final para evitar que cargue lenta la pagina -->
+  <script src="assets/js/jquery-1.12.0.min.js";</script> 
 	<script src="assets/js/bootstrap.min.js"></script> 
 
   </body>

@@ -2,8 +2,13 @@
 
 class Usuario_model extends CI_Model {
 
-	public function registrarUsuario($data) {
+	function __construct(){
+		
+		parent::__construct();
+	}
 
+	public function registrarUsuario($data) {
+		
 		$this->db->insert('usuario', $data);
 	}
 

@@ -20,6 +20,10 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('home/main');
+		/* Prueba del visionado de las paginas */
+
+		/*$this->load->view('home/main');*/
+		$this->load->view('register/registro');
+
 	}
 }

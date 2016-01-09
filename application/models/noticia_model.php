@@ -2,6 +2,11 @@
 
 class Noticia_model extends CI_Model {
 
+	function __construct(){
+		
+		parent::__construct();
+	}
+
 	public function getNoticias() {
 
 		$query = $this->db->query("SELECT * FROM noticia");

@@ -2,6 +2,11 @@
 
 class Partido_model extends CI_Model {
 
+	function __construct(){
+		
+		parent::__construct();
+	}
+
 	public function getPartidos() {
 
 		$query = $this->db->query("SELECT * FROM partido");

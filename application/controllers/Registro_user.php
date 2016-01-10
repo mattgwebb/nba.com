@@ -39,11 +39,11 @@ class Registro_user extends CI_Controller{
 		}else{
 
 			$data=array(
-				'email'=>$this->input->post('email');
-				'password'=>$this->input->post('password');
-				'nombre'=>$this->input->post('nombre');
-				'apellido'=>$this->input->post('apellido');
-				'pais'=>$this->input->post('pais');
+				'email'=>$this->input->post('email'),
+				'password'=>$this->input->post('password'),
+				'nombre'=>$this->input->post('nombre'),
+				'apellido'=>$this->input->post('apellido'),
+				'pais'=>$this->input->post('pais'),
 			);
 
 			$this->usuario_model->registrarUsuario($data);

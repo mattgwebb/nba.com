@@ -34,7 +34,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="container">
 	
 	<form class="form" role="form" action="Registro_user.php" method="GET" id="formulario1" name="formulario1">
-
+	
+	<?php echo form_open('Registro_user'); ?>
+	
 	<div class="form-group">
 	    <label for="email_1">Email: (*)</label>
 	    <input type="email" class="form-control" id="Email" placeholder="Introduce tu email" value="<?php echo set_value('email'); ?>">

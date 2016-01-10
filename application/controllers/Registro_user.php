@@ -13,13 +13,12 @@ class Registro_user extends CI_Controller{
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->load->view('register/registro');
+		$this->load->registroUsuario();
 	}
 
 	function registroUsuario(){
 
-		$this->load->helper(array('form', 'url'));
-
-        $this->load->library('form_validation');
+		/*				-----	VALIDACION ESPECIFICA DE CAMPOS   ----
 		
 		$this->form_validation->set_error_delimiters('<div class="error">','</div>');
 
@@ -38,28 +37,25 @@ class Registro_user extends CI_Controller{
 		// Validacion del campo Pais
 		$this->form_validation->set_rules('Pais','Pais','required|is_natural');
 
-		if($this->form_validation->run()==FALSE){
+		*/
 
-			$this->load->view('register/registro');
-		}else{
 
 			$data=array(
-				'email'=>$this->input->post('email'),
-				'password'=>$this->input->post('password'),
-				'nombre'=>$this->input->post('nombre'),
-				'apellido'=>$this->input->post('apellido'),
-				'pais'=>$this->input->post('pais'),
-			);
+				'email'=>$this->input->post('Email'),
+				'password'=>$this->input->post('Contrasenya'),
+				'nombre'=>$this->input->post('Nombre'),
+				'apellido'=>$this->input->post('Apellido'),
+				'pais'=>$this->input->post('Pais'),
 
 			$this->usuario_model->registrarUsuario($data);
 
 			if($this->usuario_model->registrarUsuario($data)){
 
-				echo "Insertado con exito";
+				return echo "Insertado con exito";
 			}
 			else{
 
-				echo "Error en la insercion";
+				return echo "Error en la insercion";
 			}
 
 		}

@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title>NBA.ua.es</title>
 
     <!-- Necesario para cargar el estilo de Bootstrap en su visualizacion -->
-    <link href="/NBA/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="nba.com/assets/css/bootstrap.min.css" rel="stylesheet">
 
   </head>
 
@@ -104,8 +104,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
   <!-- Necesario para cualquier pagina con Bootstrap, se coloca al final para evitar que cargue lenta la pagina -->
-  <script src="/NBA/assets/js/jquery-1.12.0.min.js";</script> 
-	<script src="/NBA/assets/js/bootstrap.min.js"></script> 
+  <script src="nba.com/assets/js/jquery-1.12.0.min.js";</script> 
+	<script src="nba.com/assets/js/bootstrap.min.js"></script> 
 
   </body>
 </html>

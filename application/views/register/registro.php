@@ -35,6 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	
 	<form class="form" role="form" action="Registro_user.php" method="GET" id="formulario1" name="formulario1">
 	
+	<?php echo validation_errors(); ?>
 	<?php echo form_open('Registro_user'); ?>
 	
 	<div class="form-group">

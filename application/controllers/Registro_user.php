@@ -9,13 +9,11 @@ class Registro_user extends CI_Controller{
 	}
 
 	function index(){
-
 		$this->registroUsuario();
 	}
 
 	function registroUsuario(){
-		$this->load->library('form_validation');
-
+		
 		$this->form_validation->set_error_delimiters('<div class="error">','</div>');
 
 		// Validacion del campo Email (con Bootstrap no hace falta)

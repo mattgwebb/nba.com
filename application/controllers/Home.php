@@ -23,6 +23,8 @@ class Home extends CI_Controller {
 		/* Prueba del visionado de las paginas */
 
 		/*$this->load->view('home/main');*/
+		$this->load->helper('form');
+		$this->load->library('form_validation');
 		$this->load->view('register/registro');
 
 	}

@@ -33,35 +33,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Formulario de registro -->
 	<div class="container">
 	
-	<form class="form" role="form" action="algo.php" method="GET" id="formulario1" name="formulario1">
+	<form class="form" role="form" action="Registro_user.php" method="GET" id="formulario1" name="formulario1">
 
 	<div class="form-group">
-	    <label for="ejemplo_email_1">Email: (*)</label>
-	    <input type="email" class="form-control" id="Email" required placeholder="Introduce tu email">
+	    <label for="email_1">Email: (*)</label>
+	    <input type="email" class="form-control" id="Email" placeholder="Introduce tu email" value="<?php echo set_value('email'); ?>">
   	</div>
 
   	<div class="form-group">
-	    <label for="ejemplo_password_1">Contraseña: (*)</label>
-	    <input type="password" class="form-control" id="contrasenya" required placeholder="Contraseña">
+	    <label for="Contrasenya">Contraseña: (*)</label>
+	    <input type="password" class="form-control" id="Contrasenya" placeholder="Contraseña" value="<?php echo set_value('password'); ?>">
   	</div>
 
   	<div class="form-group">
-  	    <input type="password" class="form-control" id="contrasenya_2" required placeholder="Repita la contraseña">
+  	    <input type="password" class="form-control" id="Contrasenya_2" placeholder="Repita la contraseña">
   	</div>
 
 	<div class="form-group">
 		<label class="control-label" for="Nombre">Nombre: (*)</label>
-		<input class="form-control" type="text" id="nombre" name="nombre" size="25" maxlength="100" required placeholder="Escriba aquí su nombre" />
+		<input class="form-control" type="text" id="Nombre" name="Nombre" size="25" maxlength="100" placeholder="Escriba aquí su nombre" value="<?php echo set_value('nombre'); ?>" />
 	</div>
 
 	<div class="form-group">
 		<label class="control-label" for="Apellido">Apellidos: (*)</label>
-		<input class="form-control" type="text" id="apellidos" name="apellidos" size="25" maxlength="100" required placeholder="Escriba aquí sus apellidos" />
+		<input class="form-control" type="text" id="Apellido" name="Apellido" size="25" maxlength="100" placeholder="Escriba aquí sus apellidos" value="<?php echo set_value('apellido'); ?>" />
 	</div>
 
 	<div class="form-group">
 		<label class="control-label" for="Pais">Pais de origen: (*)</label>
-		<select class="form-control" name="pais" id="pais">
+		<select class="form-control" name="Pais" id="Pais" value="<?php echo set_value('pais'); ?>">
 			<option value="-1">Seleccione un país</option>
 			<option value="1">España</option>
 			<option value="2">Inglaterra</option>
@@ -74,13 +74,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<div class="checkbox">
 		<label>
-			<input type="checkbox" name="terminos_uso" required> He leído y acepto los términos de uso
+			<input type="checkbox" name="Terminos_uso" required> He leído y acepto los términos de uso
     	</label>
     </div>
 
 	<div class="form-group">
 		<input class="btn btn-success" type="submit" value="Enviar datos" />
 	</div>
+
+	<?php echo form_close(); ?>
 
 	</form>
 	

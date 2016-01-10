@@ -33,8 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Formulario de registro -->
 	<div class="container">
 	
-	<form class="form" role="form" id="formulario1" name="formulario1">
-	
+	<form class="form" role="form" id="formulario1" name="formulario1">	
 	<?php echo validation_errors(); ?>
 	<?php echo form_open('Registro_user/registroUsuario'); ?>
 	

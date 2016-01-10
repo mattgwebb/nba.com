@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title>NBA.ua.es</title>
 
     <!-- Necesario para cargar el estilo de Bootstrap en su visualizacion -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/NBA/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
   </head>
 
@@ -33,38 +33,38 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Formulario de registro -->
 	<div class="container">
 	
-	<form class="form" role="form" action="Registro_user.php" method="GET" id="formulario1" name="formulario1">
+	<form class="form" role="form" id="formulario1" name="formulario1">
 	
 	<?php echo validation_errors(); ?>
-	<?php echo form_open('Registro_user'); ?>
+	<?php echo form_open('Registro_user/registroUsuario'); ?>
 	
 	<div class="form-group">
 	    <label for="email_1">Email: (*)</label>
-	    <input type="email" class="form-control" id="Email" placeholder="Introduce tu email" value="<?php echo set_value('email'); ?>">
+	    <input type="email" class="form-control" name="Email" placeholder="Introduce tu email" value="<?php echo set_value('email'); ?>">
   	</div>
 
   	<div class="form-group">
 	    <label for="Contrasenya">Contraseña: (*)</label>
-	    <input type="password" class="form-control" id="Contrasenya" placeholder="Contraseña" value="<?php echo set_value('password'); ?>">
+	    <input type="password" class="form-control" name="Contrasenya" placeholder="Contraseña" value="<?php echo set_value('password'); ?>">
   	</div>
 
   	<div class="form-group">
-  	    <input type="password" class="form-control" id="Contrasenya_2" placeholder="Repita la contraseña">
+  	    <input type="password" class="form-control" name="Contrasenya_2" placeholder="Repita la contraseña">
   	</div>
 
 	<div class="form-group">
 		<label class="control-label" for="Nombre">Nombre: (*)</label>
-		<input class="form-control" type="text" id="Nombre" name="Nombre" size="25" maxlength="100" placeholder="Escriba aquí su nombre" value="<?php echo set_value('nombre'); ?>" />
+		<input class="form-control" type="text" name="Nombre" size="25" maxlength="100" placeholder="Escriba aquí su nombre" value="<?php echo set_value('nombre'); ?>" />
 	</div>
 
 	<div class="form-group">
 		<label class="control-label" for="Apellido">Apellidos: (*)</label>
-		<input class="form-control" type="text" id="Apellido" name="Apellido" size="25" maxlength="100" placeholder="Escriba aquí sus apellidos" value="<?php echo set_value('apellido'); ?>" />
+		<input class="form-control" type="text" name="Apellido" size="25" maxlength="100" placeholder="Escriba aquí sus apellidos" value="<?php echo set_value('apellido'); ?>" />
 	</div>
 
 	<div class="form-group">
 		<label class="control-label" for="Pais">Pais de origen: (*)</label>
-		<select class="form-control" name="Pais" id="Pais" value="<?php echo set_value('pais'); ?>">
+		<select class="form-control" name="Pais" value="<?php echo set_value('pais'); ?>">
 			<option value="-1">Seleccione un país</option>
 			<option value="1">España</option>
 			<option value="2">Inglaterra</option>
@@ -93,8 +93,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
   <!-- Necesario para cualquier pagina con Bootstrap, se coloca al final para evitar que cargue lenta la pagina -->
-  <script src="assets/js/jquery-1.12.0.min.js";</script> 
-  <script src="assets/js/bootstrap.min.js"></script> 
+  <script src="/NBA/assets/js/jquery-1.12.0.min.js";</script> 
+  <script src="/NBA/assets/js/bootstrap.min.js"></script> 
 
   </body>
 </html>

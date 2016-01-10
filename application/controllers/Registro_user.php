@@ -9,27 +9,34 @@ class Registro_user extends CI_Controller{
 	}
 
 	function index(){
-		$this->registroUsuario();
+
+		$this->load->helper('form');
+		$this->load->library('form_validation');
+		$this->load->view('register/registro');
 	}
 
 	function registroUsuario(){
+
+		$this->load->helper(array('form', 'url'));
+
+        $this->load->library('form_validation');
 		
 		$this->form_validation->set_error_delimiters('<div class="error">','</div>');
 
 		// Validacion del campo Email (con Bootstrap no hace falta)
-		$this->form_validation->set_rules('email','Email', 'required|valid_email|is_unique[usuario.email]');
+		$this->form_validation->set_rules('Email','Email', 'required');
 
 		// Validacion del campo contrasenya
-		$this->form_validation->set_rules('password', 'Contrasenya', 'required|matches[Contrasenya_2]');
+		$this->form_validation->set_rules('Contrasenya', 'Contrasenya', 'required|matches[Contrasenya_2]');
 
 		// Validacion del campo Nombre
-		$this->form_validation->set_rules('nombre','Nombre','required|alpha|min_length[3]|max_length[100]');
+		$this->form_validation->set_rules('Nombre','Nombre','required|alpha|min_length[3]|max_length[100]');
 		
 		// Validacion del campo Apellido
-		$this->form_validation->set_rules('apellido','Apellido','required|min_length[3]|max_length[100]');
+		$this->form_validation->set_rules('Apellido','Apellido','required|min_length[3]|max_length[100]');
 
 		// Validacion del campo Pais
-		$this->form_validation->set_rules('pais','Pais','required|is_natural');
+		$this->form_validation->set_rules('Pais','Pais','required|is_natural');
 
 		if($this->form_validation->run()==FALSE){
 

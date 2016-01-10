@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title>NBA.ua.es</title>
 
     <!-- Necesario para cargar el estilo de Bootstrap en su visualizacion -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/NBA/assets/css/bootstrap.min.css" rel="stylesheet">
 
   </head>
 
@@ -34,7 +34,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">NBA</a>
+            <ul class="nav navbar-nav">
+            <li class="nav-item active">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Players</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Teams</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Games</a>
+            </li>
+          </ul>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
@@ -88,8 +104,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
   <!-- Necesario para cualquier pagina con Bootstrap, se coloca al final para evitar que cargue lenta la pagina -->
-  <script src="assets/js/jquery-1.12.0.min.js";</script> 
-	<script src="assets/js/bootstrap.min.js"></script> 
+  <script src="/NBA/assets/js/jquery-1.12.0.min.js";</script> 
+	<script src="/NBA/assets/js/bootstrap.min.js"></script> 
 
   </body>
 </html>

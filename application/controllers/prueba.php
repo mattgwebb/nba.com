@@ -9,3 +9,5 @@ class Prueba extends CI_Controller {
 		print_r($jugadores);
 	}
 }
+
+?>

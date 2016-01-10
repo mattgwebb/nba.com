@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="author" content="Francisco Javier Galiana y Matthew Webb">
     <meta name="keywords" content="Ingeniería, web, NBA" />
     <meta name="copyright" content="2016 FraMatt" />
-    <link rel="icon" href="nba.com/assets/img/favicon.ico">
+    <link rel="icon" href="assets/img/favicon.ico">
 
     <title>NBA.ua.es</title>
 
@@ -49,6 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    <input type="password" class="form-control" id="Contrasenya" name="Contrasenya" required placeholder="Contraseña" value="<?php echo set_value('Contrasenya'); ?>">
   	</div>
 
+  	<!-- CONFIRMACION DE CONTRASENYA 
   	<div class="form-group">
   	    <input type="password" class="form-control" id="Contrasenya_2" name="Contrasenya_2" required placeholder="Repita la contraseña">
   	</div>
@@ -57,6 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		  <button type="button" class="close" data-dismiss="alert">&times;</button>
 		  <strong>¡Cuidado!</strong> La confirmación de contraseña debe coincidir.
 	</div>
+	-->
 
 	<div class="form-group">
 		<label class="control-label" for="Nombre">Nombre: (*)</label>
@@ -115,6 +117,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<!-- Script del desplegable de terminos de uso -->
 	<script>$(document).ready(function(){$('[data-toggle="popover"]').popover();});</script>
-  
+
   </body>
 </html>

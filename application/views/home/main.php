@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="author" content="Francisco Javier Galiana y Matthew Webb">
     <meta name="keywords" content="Ingeniería, web, NBA" />
     <meta name="copyright" content="2016 FraMatt" />
-    <link rel="icon" href="assets/img/favicon.ico">
+    <link rel="icon" href="/nba.com/assets/img/favicon.ico">
 
     <title>NBA.ua.es</title>
 

@@ -14,12 +14,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="author" content="Francisco Javier Galiana y Matthew Webb">
     <meta name="keywords" content="Ingeniería, web, NBA" />
     <meta name="copyright" content="2016 FraMatt" />
-    <link rel="icon" href="/nba.com/assets/img/favicon.ico">
+    <link rel="icon" href="/NBA/assets/img/favicon.ico">
 
     <title>NBA.ua.es</title>
 
     <!-- Necesario para cargar el estilo de Bootstrap en su visualizacion -->
-    <link href="nba.com/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/NBA/assets/css/bootstrap.min.css" rel="stylesheet">
 
 
     <script type="text/javascript" language="javascript" src="http://www.technicalkeeda.com/js/javascripts/plugin/jquery.js"></script>

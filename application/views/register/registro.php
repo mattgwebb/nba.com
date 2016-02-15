@@ -14,14 +14,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="author" content="Francisco Javier Galiana y Matthew Webb">
     <meta name="keywords" content="Ingeniería, web, NBA" />
     <meta name="copyright" content="2016 FraMatt" />
-    <link rel="icon" href="assets/img/favicon.ico">
+    <link rel="icon" href="/NBA/assets/img/favicon.ico">
 
     <title>NBA.ua.es</title>
 
     <!-- Necesario para cargar el estilo de Bootstrap en su visualizacion -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <script src="assets/js/jquery-1.12.0.min.js"></script>
-  	<script src="assets/js/bootstrap.min.js"></script>
+    <link href="/NBA/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script src="/NBA/assets/js/jquery-1.12.0.min.js"></script>
+  	<script src="/NBA/assets/js/bootstrap.min.js"></script>
 
   </head>
 
@@ -44,6 +44,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   			<div class="form-group">
 	    		<label for="contrasenya">Contraseña: (*)</label>
 	    		<input type="password" class="form-control" name="contrasenya" placeholder="Contraseña" value="">
+  			</div>
+
+  			<div class="form-group">
+	    		<label for="contrasenya_2">Repita la contraseña: (*)</label>
+	    		<input type="password" class="form-control" name="contrasenya_2" placeholder="Contraseña" value="">
   			</div>
 
 			<div class="form-group">

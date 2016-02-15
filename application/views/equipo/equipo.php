@@ -21,47 +21,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Necesario para cargar el estilo de Bootstrap en su visualizacion -->
     <link href="/NBA/assets/css/bootstrap.min.css" rel="stylesheet">
 
-
-    <script type="text/javascript" language="javascript" src="http://www.technicalkeeda.com/js/javascripts/plugin/jquery.js"></script>
-    <script type="text/javascript" src="http://www.technicalkeeda.com/js/javascripts/plugin/json2.js"></script>
-    <script>
-      $(document).ready(function(){
-        $("#search").keyup(function(){
-          if($("#search").val().length>3){
-            $.ajax({
-              type: "post",
-              url: "http://localhost/NBA/index.php/home/autoCompletar",
-              cache: false,       
-              data:'search='+$("#search").val(),
-              success: function(response){
-                $('#a').html("");
-                var obj = JSON.parse(response);
-                if(obj.length>0){
-                  try{
-                    var items=[];   
-                    $.each(obj, function(i,val){                      
-                      items.push($('<option/>').text(val.nombre));
-                    }); 
-                    $('#a').append.apply($('#a'), items);
-                  } catch(e) {   
-                    alert('Exception while request..');
-                  }   
-                }
-            },
-            error: function(){            
-              alert('Error while request..');
-            }
-        });
-      }
-    return false;
-    });
-  });
-  </script>
-   <script src="/NBA/assets/js/jquery-1.12.0.min.js"></script> 
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-   <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-
   </head>
 
   <body>
@@ -93,14 +52,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </li>
           </ul>
         </div>
-         <form class="navbar-form navbar-left" role="search" method="POST" action="/NBA/index.php/home/search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search" id="search" name="search" list="a">
-           <datalist id="a">
-          </datalist>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
         <?php
           if($this->session->userdata('logged_in')) {
               $data['email'] = $this->session->userdata('logged_in');
@@ -132,9 +83,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <h1><?php echo $equipo->nombre; ?></h1>
+        <img src="/NBA/assets/img/lakers.png" class="img-thumbnail" alt="Cinque Terre">
+        <p><a class="btn btn-primary btn-lg" href="/NBA/index.php/equipo/info/Los Angeles Lakers" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
 
@@ -153,7 +104,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
-
           <h2>Heading</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
@@ -168,6 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 
   <!-- Necesario para cualquier pagina con Bootstrap, se coloca al final para evitar que cargue lenta la pagina -->
+  <script src="/NBA/assets/js/jquery-1.12.0.min.js";</script> 
 	<script src="/NBA/assets/js/bootstrap.min.js"></script> 
 
   </body>

@@ -7,7 +7,11 @@ class Noticia_model extends CI_Model {
 		parent::__construct();
 	}
 
-	public function getNoticias() {
+	public function insertar($data) {
+		$this->db->insert('noticia', $data);
+	}
+
+	public function getTodos() {
 
 		$query = $this->db->query("SELECT * FROM noticia");
 		if ($query->num_rows() > 0) {
@@ -29,5 +33,20 @@ class Noticia_model extends CI_Model {
 
 		$this->db->insert('comentario', $data);
 
+	}
+
+	public function getCampos() {
+		return $this->db->list_fields('noticia');
+	}
+
+	public function actualizar($data) {
+		$this->db->where('id', $data['id']);
+		unset($data[0]);
+		$this->db->update('noticia', $data);
+	}
+
+	public function borrar($id) {
+		$this->db->where('id', $id);
+		$this->db->delete('noticia'); 
 	}
 }
